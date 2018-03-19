@@ -18,5 +18,5 @@ function bingBong(banana) {
     banana = "Bong!"
   }
   finalOut.push(`<li> ${banana} </li>`);
-  document.getElementById("result").innerHTML =`<ul> ${finalOut} </ul>`;
 };
+document.getElementById("result").innerHTML =`<ul> ${finalOut} </ul>`;
