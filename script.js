@@ -1,5 +1,6 @@
 let n = 0;
 let finalOut = [];
+let listRes = document.getElementById("result");
 
 while (n <= 100)
 {
@@ -17,6 +18,16 @@ function bingBong(banana) {
   else if(banana % 5 == 0){
     banana = "Bong!"
   }
-  finalOut.push(`<li> ${banana} </li>`);
+  finalOut.push(banana);
 };
-document.getElementById("result").innerHTML =`<ul> ${finalOut} </ul>`;
+
+function createList(finalOut) {
+for (var f = 0; f < finalOut.length; f++) {
+  var itemZ = finalOut[f]
+  var listItem = document.createElement("LI");
+  listItem.textContent = itemZ;
+  listRes.appendChild(listItem);
+  }
+};
+
+createList(finalOut);
